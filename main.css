@@ -1,0 +1,29 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+.growtopia p {
+  margin: 0;
+  font-size: 25px;
+  color: #000;
+}
+.growtopia h1 {
+  font-size: 50px;
+  font-family: bold;
+  margin: 0;
+  color: #000000;
+  padding: 10px;
+}
+
+.growtopia {
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url(growtopia.jpg);
+  padding: 0;
+}

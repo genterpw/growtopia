@@ -17,6 +17,11 @@ header {
   margin-bottom: 50px;
   padding: 20px;
 }
+.pictures {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0px;
+}
 .growtopia p {
   margin: 0;
   font-size: 25px;
@@ -51,10 +56,17 @@ div.information {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 15px 15px 15px 341px;
+  margin: 15px 15px 15px 35px;
   background-image: url(troll1.PNG);
   width: 50%;
   color: #fff;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 960px) {
+  .pictures {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 

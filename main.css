@@ -2,6 +2,21 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
 }
+a {
+  text-decoration: none;
+  color: #fff;
+}
+header {
+  font-weight: bold;
+  color: #000;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
 .growtopia p {
   margin: 0;
   font-size: 25px;
@@ -16,6 +31,7 @@ body {
 }
 
 .growtopia {
+  display: flex;
   align-items: center;
   justify-content: center;
   background-position: center;
@@ -24,6 +40,21 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-image: url(growtopia.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(growtopia.jpg);
+  background-attachment: fixed;
   padding: 0;
 }
+
+div.information {
+  background-size: cover;
+  height: 341px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 15px 15px 341px;
+  background-image: url(troll1.PNG);
+  width: 50%;
+  color: #fff;
+  background-repeat: no-repeat;
+}
+

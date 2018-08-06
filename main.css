@@ -51,19 +51,21 @@ header {
 }
 
 div.information {
+  background-position: center;
   background-size: cover;
   height: 341px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 15px 15px 15px 35px;
+  margin: 0 auto;
   background-image: url(troll1.PNG);
   width: 50%;
   color: #fff;
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 960px) {
-  .pictures {
+  div.information {
+    width: 100%;
     flex-direction: column;
     align-items: center;
   }

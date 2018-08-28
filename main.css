@@ -1,74 +1,168 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-}
-a {
-  text-decoration: none;
-  color: #fff;
-}
-header {
-  font-weight: bold;
-  color: #000;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
-  margin-bottom: 50px;
-  padding: 20px;
-}
-.pictures {
-  display: flex;
-  justify-content: space-around;
-  margin: 50px 0px;
-}
-.growtopia p {
-  margin: 0;
-  font-size: 25px;
-  color: #000;
-}
-.growtopia h1 {
-  font-size: 50px;
-  font-family: bold;
-  margin: 0;
-  color: #000000;
-  padding: 10px;
+html {
+  box-sizing: border-box
 }
 
-.growtopia {
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  height: 100vh;
+  background-image: url("dab.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  margin: 0;
+}
+
+
+.container {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  height: 60vh;
+  padding: 0px;
+  width: 60vw;
+}
+.read {
+  margin: 40px;
+}
+.info {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(growtopia.jpg);
-  background-attachment: fixed;
+  justify-content: space-between;
+  font-size: 18px;
+  align-items: center;
+}
+.info h1 {
+  flex: 1;
+  margin-left: 40px;
+}
+.nav {
+  display: flex;
+  flex: 2;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
   padding: 0;
 }
 
-div.information {
-  background-position: center;
-  background-size: cover;
-  height: 341px;
+/* give all the rects a transition for smooth animation */
+#menu-hamburger rect {
+  transition: all 0.5s;
+}
+
+/* gave rects a transition only when the parent of the rect has the class of animate */
+
+.animate .hamburger-menu__rect1 {
+  transform: rotate(35deg) translate(2px, -2px);
+}
+
+.animate .hamburger-menu__rect3 {
+  transform: rotate(-35deg) translate(-7px, -2px);
+}
+
+/*  gave the second rect opacity of 0 only when the parent has the class of animate */
+.animate .hamburger-menu__rect2 {
+  opacity: 0;
+}
+/* use flex to add space around the element and vertically center them */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*
+  hides the menu that shows up on the screen when clicking on the hamburger menu.
+  Styles for the responsive menu to make it look nice.
+*/
+
+.responsive-nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  background-image: url(troll1.PNG);
-  width: 50%;
-  color: #fff;
-  background-repeat: no-repeat;
 }
-@media screen and (max-width: 960px) {
-  div.information {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
+
+ /* styles to make the responsive menu look better   */
+
+.responsive-nav ul {
+  list-style-type: none;
+}
+
+.responsive-nav ul li a {
+  color: #fff;
+  font-size: 21px;
+  letter-spacing: 1px;
+}
+
+.responsive-nav__open {
+  transform: translateX(0)
+}
+
+/* give the hamburger menu styles  */
+
+#menu-hamburger {
+  fill: #fff;
+  margin-right: 30px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* give all the rects a transition */
+
+
+#menu-hamburger rect {
+  transition: all 0.5s;
+}
+
+/*
+  css to animate the responsive hamburger menu
+  only when it is nested inside a element with
+  the class of animate
+*/
+
+.animate .hamburger-menu__rect1 {
+  transform: rotate(35deg) translate(2px, -2px);
+}
+
+.animate .hamburger-menu__rect3 {
+  transform: rotate(-35deg) translate(-7px, -2px);
+}
+
+.animate .hamburger-menu__rect2 {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 960px) {
+  .nav {
+    display: none;
+  }
+  .container {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    height: 90vh;
+    padding: 0px;
+    width: 90vw;
+  }
+  body {
+    background-position: center;
   }
 }
-
-
+@media only screen and (min-width: 960px) {
+  #menu-hamburger {
+    display: none;
+  }
+}
